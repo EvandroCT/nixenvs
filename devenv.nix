@@ -23,10 +23,7 @@ in
     };
   };
 
-  scripts.hello.exec = "uv run python hello.py";
-
   enterShell = ''
     . .devenv/state/venv/bin/activate
-    hello
   '';
 }
