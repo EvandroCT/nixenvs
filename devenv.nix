@@ -15,15 +15,11 @@ in
     LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
   };
 
-  languages.python = {
-    enable = true;
-    uv = {
-      enable = true;
-      sync.enable = true;
-    };
-  };
+  packages = with pkgs; [
+    gdal
+  ];
 
   enterShell = ''
-    . .devenv/state/venv/bin/activate
+    echo "GDAL version: $(gdal --version)"
   '';
 }
