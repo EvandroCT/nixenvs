@@ -17,9 +17,20 @@ in
 
   packages = with pkgs; [
     gdal
+    python3Packages.gdal
   ];
 
+  languages.python = {
+    enable = true;
+    uv = {
+      enable = true;
+      sync.enable = true;
+    };
+  };
+
   enterShell = ''
+    . .devenv/state/venv/bin/activate
     echo "GDAL version: $(gdal --version)"
+    echo "GDAL Python:  $(python -c 'from osgeo import gdal; print(gdal.__version__)')"
   '';
 }
