@@ -18,6 +18,7 @@ in
   packages = with pkgs; [
     gdal
     python3Packages.gdal
+    jq
   ];
 
   languages.python = {
