@@ -1,11 +1,10 @@
 [project]
-name = "mission1-env"
+name = "Mission1"
 version = "0.1.0"
 description = "Mission 1 environment."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "earthengine-api",
+    "earthaccess",
     "geopandas",
-    "ipykernel",
 ]

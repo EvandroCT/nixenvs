@@ -15,6 +15,11 @@ in
     LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
   };
 
+  packages = with pkgs; [
+    gdal
+    python3Packages.gdal
+  ];
+
   languages.python = {
     enable = true;
     uv = {
