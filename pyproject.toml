@@ -1,10 +1,9 @@
 [project]
-name = "Mission1"
+name = "Mission2"
 version = "0.1.0"
-description = "Mission 1 environment."
+description = "Mission 2 environment: HLS quality validation and VRT generation."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "earthaccess",
-    "geopandas",
+    "numpy",
 ]
