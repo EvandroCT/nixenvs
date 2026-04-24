@@ -1,15 +1,15 @@
 [project]
-name = "mission3-env"
+name = "mission4-env"
 version = "0.1.0"
-description = "Mission 3 environment: GeoZarr datacube assembly from HLS band TIFs."
+description = "Mission 4 environment: PyTorch training of the HLS foundational model over GeoZarr datacubes."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "torch",
+    "torchvision",
+    "lightning",
     "xarray",
     "zarr",
-    "rioxarray",
-    "dask",
     "numpy",
-    "pandas",
     "geozarr-toolkit",
 ]
