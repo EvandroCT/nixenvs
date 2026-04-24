@@ -12,4 +12,7 @@ dependencies = [
     "zarr",
     "numpy",
     "geozarr-toolkit",
+    "matplotlib",
+    "ipywidgets",
+    "ipykernel",
 ]
