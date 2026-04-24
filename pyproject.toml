@@ -1,9 +1,15 @@
 [project]
-name = "Mission2"
+name = "mission3-env"
 version = "0.1.0"
-description = "Mission 2 environment: HLS quality validation and VRT generation."
+description = "Mission 3 environment: GeoZarr datacube assembly from HLS band TIFs."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "xarray",
+    "zarr",
+    "rioxarray",
+    "dask",
     "numpy",
+    "pandas",
+    "geozarr-toolkit",
 ]

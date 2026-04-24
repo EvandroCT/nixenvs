@@ -8,18 +8,13 @@ let
     stdenv.cc.cc
     libuv
     zlib
+    expat
   ];
 in
 {
   env = {
     LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
   };
-
-  packages = with pkgs; [
-    gdal
-    python3Packages.gdal
-    jq
-  ];
 
   languages.python = {
     enable = true;
