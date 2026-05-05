@@ -16,4 +16,6 @@ dependencies = [
     "ipywidgets",
     "ipykernel",
     "jupyterlab",
+    "tensorboard",
+    "jupyter-server-proxy",
 ]
