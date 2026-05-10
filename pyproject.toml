@@ -18,4 +18,5 @@ dependencies = [
     "jupyterlab",
     "tensorboard",
     "jupyter-server-proxy",
+    "tifffile",
 ]
