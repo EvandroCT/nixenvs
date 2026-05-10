@@ -32,6 +32,11 @@ in
   enterShell = ''
     . .devenv/state/venv/bin/activate
 
+    # Block /opt/conda's PROJ/GDAL data dirs from leaking into the venv:
+    # rasterio bundles its own (newer) PROJ db, and the host conda one has
+    # a stale schema (DATABASE.LAYOUT.VERSION.MINOR=3 vs required >=6).
+    unset PROJ_DATA PROJ_LIB GDAL_DATA GDAL_DRIVER_PATH
+
     # Expose only NVIDIA-related libs (libcuda.so*, libnvidia-*.so*) from the
     # host into a private symlink dir, then append that dir to LD_LIBRARY_PATH.
     # Never add generic system lib dirs (e.g. /usr/lib/x86_64-linux-gnu) — they
